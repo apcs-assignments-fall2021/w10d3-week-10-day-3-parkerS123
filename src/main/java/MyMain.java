@@ -4,19 +4,27 @@ public class MyMain {
 
     // Counts the number of words that starts with 'a' or 'A'
     public static int startsWithA(ArrayList<String> list) {
-        // REPLACE WITH YOUR CODE
-        return 0;
+        int counter = 0;
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i).charAt(0) == 'a' || list.get(i).charAt(0) == 'A'){
+               counter++;
+            }
+        }
+        return counter;
     }
 
     // Adds a ! to each element in the ArrayList, returns an ArrayList
     public static ArrayList<String> makeExciting(ArrayList<String> list) {
-        // REPLACE WITH YOUR CODE
-        return null;
+        for (int i = 0; i < list.size(); i++){
+            list.set(i, list.get(i) + "!");
+        }
+        return list;
     }
 
     // Returns true if there is an int that appears in both lists
     public static boolean checkDuplicates(ArrayList<Integer> list1, ArrayList<Integer> list2) {
-        // REPLACE WITH YOUR CODE
+        // for (int i = 0; i > length.list1)
+
         return false;
     }
 

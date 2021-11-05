@@ -64,20 +64,21 @@ public class MyMain {
     // Takes two **sorted** ArrayLists and merges them together into one big sorted ArrayList
     // (Hint: you may find it useful to use a while loop, as well as the remove() method).
     public static ArrayList<Integer> merge(ArrayList<Integer> list1, ArrayList<Integer> list2) {
-        int size2 = list2.size();
         int index2 = 0;
         for (int i = 0; i < list1.size(); i++) {
-            while (size2 > 0) {
-                list1.add(list2.get(index2));
+            while (list2.size() > index2 && list2.get(index2) < list1.get(i)) {
+                list1.add(i, list2.get(index2));
                 index2++;
-                size2--;
             }
         }
-        //for (int j = 0; j < list1.size(); j++){
-            //if (list1)
-        //}
 
-        return list2;
+        for (int j = index2; j < list2.size(); j++){
+            list1.add(list2.get(index2));
+            index2++;
+        }
+
+
+        return list1;
     }
 
 
